@@ -145,6 +145,7 @@ mods:
 ## @param factorioServer.generate_new_save Generate a new save if `save_name` is not found
 ## @param factorioServer.update_mods_on_start Update mods on server start
 ## @param factorioServer.load_latest_save Lets the game know if you want to load the latest save
+## @param factorioServer.env Additional environment variables
 factorioServer:
   # specify a save name
   save_name: "replaceMe"
@@ -154,6 +155,8 @@ factorioServer:
   update_mods_on_start: false
   # lets the game know if you want to load the latest save
   load_latest_save: true
+  # Additional environment variables
+  env: {}
 
 import_save:
   # enable save importer

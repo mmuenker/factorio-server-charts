@@ -169,6 +169,9 @@ spec:
           value: {{ .Values.factorioServer.load_latest_save | quote }}
         - name: CONFIG
           value: /factorio/configs
+{{- if .Values.factorioServer.env }}
+{{ toYaml .Values.nodeSelector.env | indent 8 }}
+{{- end }}
 {{- if .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.nodeSelector | indent 8 }}
