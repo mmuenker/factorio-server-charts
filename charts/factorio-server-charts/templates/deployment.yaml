@@ -170,7 +170,7 @@ spec:
         - name: CONFIG
           value: /factorio/configs
 {{- if .Values.factorioServer.env }}
-{{ toYaml .Values.nodeSelector.env | indent 8 }}
+{{ toYaml .Values.factorioServer.env | indent 8 }}
 {{- end }}
 {{- if .Values.nodeSelector }}
       nodeSelector:
